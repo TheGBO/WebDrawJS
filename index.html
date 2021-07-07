@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Aplicativo de desenho em javascript</title>
+</head>
+<body>
+    <div class="topbar">
+        <a onclick="reset()">Novo desenho</a>
+    </div>
+    <canvas id="canvas" onresize="newcanvas()">
+
+    </canvas>
+    <div id="tools">
+        <div id=cores>
+            <div id="cores1">
+                <div class="cor" onclick="mudacor(this)" style="background: blue;"></div>
+                <div class="cor" onclick="mudacor(this)" style="background: rgb(255, 0, 0);"></div>
+                <div class="cor" onclick="mudacor(this)" style="background: rgb(255, 251, 0);"></div>
+                <div class="cor" onclick="mudacor(this)" style="background: rgb(0, 175, 9);"></div>
+                <div class="cor" onclick="mudacor(this)" style="background: rgb(0, 0, 0);"></div>
+                <div class="cor" onclick="mudacor(this)" style="background: rgb(255, 0, 242);"></div>
+                <div class="cor" onclick="mudacor(this)" style="background: rgb(67, 0, 143);"></div>
+                <div class="cor" onclick="mudacor(this)" style="background: rgb(255, 255, 255);"></div>
+            </div>
+            <input type="color" name="cor" id="inputcor" oninput="cor_desenho = this.value">
+        </div>
+        <div id="pincel">
+            <input type="range" name="grossura" id="tamanho_pincel" min="1" max="250" oninput="grossura_pincel = this.value" value="1">
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
